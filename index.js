@@ -1,7 +1,11 @@
 var scope = {
-	pdfbox : __dirname + "/bin/pdfbox-app-1.7.1.jar"
+	pdfbox : __dirname + "/bin/pdfbox-app-1.8.9.jar"
 }
 
 module.exports.PDFSplit = function(){
-	require('./lib/PDFSplit').apply(scope, arguments)
+	return require('./lib/PDFSplit').apply(scope, arguments)
+};
+
+module.exports.PDFMerger = function(){
+	return require('./lib/PDFMerger').apply(scope, arguments)
 };
